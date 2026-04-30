@@ -1,5 +1,5 @@
 {
-  "name": "native-base",
+  "name": "@smarter-contact-team/native-base",
   "description": "Essential cross-platform UI components for React Native",
   "sideEffects": false,
   "keywords": [
@@ -218,11 +218,18 @@
     "lib": "lib"
   },
   "gitHead": "5bbeacc403ba97622703699132c55d8359344004",
-  "homepage": "https://github.com/GeekyAnts/NativeBase#readme",
+  "homepage": "https://github.com/smarter-contact-team/NativeBaseUIFixes#readme",
   "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/smarter-contact-team/NativeBaseUIFixes/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "repository": "https://github.com/smarter-contact-team/NativeBaseUIFixes"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GeekyAnts/NativeBase.git"
+    "url": "git+https://github.com/smarter-contact-team/NativeBaseUIFixes.git"
   },
   "collective": {
     "type": "opencollective",
