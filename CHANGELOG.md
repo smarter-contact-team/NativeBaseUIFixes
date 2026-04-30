@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/smarter-contact-team/NativeBaseUIFixes/compare/v1.0.0...v1.0.1) (2026-04-30)
+
+
+### Bug Fixes
+
+* **ci:** skip Sonar scan unless SONAR secrets are set ([#4](https://github.com/smarter-contact-team/NativeBaseUIFixes/issues/4)) ([3c7eb48](https://github.com/smarter-contact-team/NativeBaseUIFixes/commit/3c7eb489bdae51d0d4160f26b43352f35dd960b4))
+
 ## 1.0.0 (2026-04-30)
 
 
