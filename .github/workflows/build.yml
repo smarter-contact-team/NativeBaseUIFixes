@@ -15,10 +15,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Requires repo/org secrets SONAR_TOKEN and SONAR_HOST_URL; otherwise the scanner
-      # fails with "URI with undefined scheme" when SONAR_HOST_URL is unset.
+      # GitHub Actions does not allow `secrets` in `if:` expressions. Gate via step output.
+      - name: Determine if Sonar credentials are configured
+        id: sonar
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        run: |
+          if [ -n "${SONAR_TOKEN:-}" ] && [ -n "${SONAR_HOST_URL:-}" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: sonarsource/sonarqube-scan-action@v5
-        if: ${{ secrets.SONAR_TOKEN != '' && secrets.SONAR_HOST_URL != '' }}
+        if: steps.sonar.outputs.enabled == 'true'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
