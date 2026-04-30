@@ -1,17 +1,13 @@
-<!-- Thanks for submitting a pull request! We appreciate you spending the time to work on these changes. Please provide enough information so that others can review your pull request. The three fields below are mandatory. -->
-
 ## Summary
 
-<!-- Explain the **motivation** for making this change. What existing problem does the pull request solve? -->
+<!-- What changed and why -->
 
-## Changelog
+## Release / release-please
 
-<!-- Help reviewers and the release process by writing your own changelog entry. For an example, see:
-https://github.com/facebook/react-native/wiki/Changelog
--->
+This repo uses **release-please**. Use **Squash and merge** with a Conventional Commit title (`fix:`, `feat:`, …) or **Rebase and merge** if all commits are conventional. Avoid untitled merge commits for release-driving work.
 
-[CATEGORY] [TYPE] - Message
+`fix:` / `feat:` typically drive semver bumps; `docs:` / `chore:` alone may not open a release PR.
 
-## Test Plan
+## Checklist
 
-<!-- Demonstrate the code is solid. Example: The exact commands you ran and their output, screenshots / videos if the pull request changes the user interface. -->
+- [ ] Merge strategy matches release / changelog intent
